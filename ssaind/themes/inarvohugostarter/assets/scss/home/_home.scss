@@ -1,0 +1,38 @@
+.sec-welcm {
+    grid-area: sec-welcm;
+    grid-column:center-start/center-end;
+
+}
+
+.sec-welcm-c {
+    padding-top:5rem;
+    text-align: center;
+}
+
+.sec-welcm-c p {
+    padding-top:5rem;
+}
+.sec-prods {
+    grid-area: sec-prods;
+    grid-column:center-start/center-end;
+
+}
+
+.sec-prods-c {
+    display:flex;
+    flex-direction: row;
+    padding:10px;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @include respond(phone) {
+       flex-direction:column;
+    }
+}
+.sec-prods-c picture {
+    padding: 25px;
+}
+
+.tentuff-pic {
+    padding-top: 30px;
+}

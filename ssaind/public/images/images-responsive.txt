@@ -1,0 +1,20 @@
+<picture>
+<img
+sizes='(max-width: 446px) 100vw, 446px'
+srcset='
+tentuff-logo_jymns4_c_scale_w_446_odtvvr_c_scale,w_200.png 200w,
+tentuff-logo_jymns4_c_scale_w_446_odtvvr_c_scale,w_446.png 446w'
+src='tentuff-logo_jymns4_c_scale_w_446_odtvvr_c_scale,w_446.png'
+alt=''>
+</picture>
+
+
+<picture>
+<img
+sizes='(max-width: 300px) 100vw, 300px'
+srcset='
+PREVENT-LOGO-300x286_mnfqqh_c_scale,w_200.png 200w,
+PREVENT-LOGO-300x286_mnfqqh_c_scale,w_300.png 300w'
+src='PREVENT-LOGO-300x286_mnfqqh_c_scale,w_300.png'
+alt=''>
+</picture>

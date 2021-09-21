@@ -1,0 +1,42 @@
+.pg-body {
+	display: grid;
+	grid-template-areas:
+        "pg-cont"
+        "pg-footer-bar";
+ }
+
+.pg-cont,.pg-footer-bar {
+    display:grid;
+    grid-template-columns:
+    [full-start]  minmax(6rem, 1fr) [center-start] 1fr
+    [center-end] minmax(6rem, 1fr) [full-end];
+}
+.pg-cont  {
+    grid-area:pg-cont;
+    width:100%;
+    display:grid;
+}
+.pg-cont {
+    grid-template-areas: 
+    "sec-welcm"
+    "sec-products"
+}
+
+.pg-footer-bar { 
+    grid-area:pg-footer-bar;
+    left: 0;
+    width:100%;
+    padding-top:5rem;
+}
+
+.pg-footer-bar-c {
+    grid-column: center-start/center-end;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.pg-footer-bar a {
+    text-decoration: none;
+    color:black;
+    font-size:1.5rem;
+}

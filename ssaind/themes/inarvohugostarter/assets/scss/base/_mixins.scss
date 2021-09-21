@@ -1,0 +1,45 @@
+/* 
+breakpoint argument choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+1em = 16px
+
+*/
+/* 
+breakpoints 
+- 241 - 15.063em
+- 321 - 20.063em
+- 481 - 30.063em
+- 600 - 37.500em
+- 865 - 54.063em
+- 1024 - 64.000em
+
+ems not rems because rems have not worked the way it is expected in some screen sizes. 
+
+*/
+ @mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media(max-width:37.5em) {  //600px
+            @content;
+        }
+    }
+    @if $breakpoint == tab-port {
+        @media(max-width:56.25em) { //900px
+            @content;
+        }
+    }
+    @if $breakpoint == tab-land {
+        @media(max-width:75em) {  //1200px
+            @content;
+        }
+    }
+    @if $breakpoint == big-desktop {
+        @media(min-width:112.5em) {  //1800px
+            @content;
+        }
+    }
+
+}
+

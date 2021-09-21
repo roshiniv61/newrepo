@@ -1,0 +1,25 @@
+#################### default parameters ################################
+[params]
+ssasiteurl="http://www.ssaind.co.in"
+preventsiteurl="https://www.tentuff.com/prevent"
+
+moonandbakersiteurl="https://www.moonandbaker.com"
+
+tentuffsiteurl = "https://www.tentuff.com"
+
+# Meta data
+description = "Welcome to SSA India – Enhancing your Lifestyle with three great Australian products in the Window & Door Industry."
+
+# contact info
+address = "SSA India, #2968, 4th Cross, Off 12th Main Road, Indiranagar, Bangalore - 560038"
+mobile = "+91-6366843592"
+email = "info@ssaind.co.in"
+
+############################## Home Page Sections ###############################
+homepagesections = ["home/welcome","home/products"]
+
+[params.footer]
+    copyright_text = "Copyright [SSA India]"
+    developer="inarvo" 
+    developerSite="https://www.inarvo.com"
+

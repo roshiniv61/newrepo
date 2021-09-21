@@ -1,0 +1,4 @@
+baseURL = "http://www.ssaind.co.in/"
+languageCode = "en-us"
+title = "SSA India"
+theme="inarvohugostarter"
