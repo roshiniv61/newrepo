@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <script src="https://kit.fontawesome.com/39350e10d8.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/39350e10d8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- concave corners -->
+    <div class="bg-white shadow-2xl mt-20 h-96 flex flex-row justify-center items-center lg:mx-36 md:mx-24 py-10 rounded-lg ">
+        <div class="bg-gray-400 h-32 w-64 absolute">
+            <div class="flex justify-between">
+                <div class="bg-white h-5 w-5  rounded-br-full"></div>
+                <div class="bg-white h-5 w-5 rounded-bl-full  "></div>
+            </div>
+            <div class="flex justify-between pt-20 mt-2">
+                <div class="bg-white h-5 w-5 rounded-tr-full "></div>
+                <div class="bg-white h-5 w-5 rounded-tl-full "></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Curved background -->
+    <div class="bg-white shadow-2xl mt-20 h-96  p-2 lg:mx-36 md:mx-24  rounded-lg ">
+        <div class="bg-gray-400 w-full h-60 rounded-b-full "></div>
+        </div>
+
+        <!-- corner ribbon -->
+    <div class="bg-white shadow-2xl mt-20 h-96  p-2 lg:mx-36 md:mx-24 flex flex-row justify-center items-center  rounded-lg ">
+        <div class="border border-gray-400 h-52 w-52 rounded-sm relative">
+            <div class="h-24 w-48 absolute top-0 left-0 overflow-hidden text-center">
+                <div class="bg-gray-400 h-4 w-28 absolute  transform -rotate-45 -left-8  top-6 "></div>
+            </div>
+        </div>
+        </div>
+
+        
+
+        <!-- Triangle buttons -->
+        <div class="bg-white shadow-2xl mt-20 h-96 flex flex-row justify-center items-center lg:mx-36 md:mx-24 py-10 rounded-lg ">
+           <div>
+            <div class="flex  justify-center ">
+            <div class="border-2 border-gray-400 h-8 w-16 ">
+            <div class="flex ">
+                <div class="text-2xl text-gray-400 flex mx-1 flex-row items-center "> <i class="fas fa-caret-up"></i></div>
+                <div class="pl-1">Up</div>
+                </div>
+            </div>
+            </div>
+            
+            <div class="flex  justify-center my-16">
+                <div class="border-2 border-gray-400 h-8 w-16 mr-32">
+                    <div class="flex ">
+                    <div class="text-2xl text-gray-400 flex mx-1 flex-row items-center "> <i class="fas fa-caret-left"></i></div>
+                        <div class="pl-1">left</div>
+                    </div>
+                </div>
+                <div class="border-2 border-gray-400 h-8 w-16 ">
+                    <div class="flex ">
+                    <div class="text-2xl text-gray-400 flex mx-1 flex-row items-center "> <i class="fas fa-caret-right"></i></div>
+                        <div class="pl-1">right</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="flex  justify-center ">
+            <div class="border-2 border-gray-400 h-8 w-20 ">
+            <div class="flex ">
+               <div class="text-2xl text-gray-400 flex mx-1 flex-row items-center "> <i class="fas fa-caret-down"></i></div>
+                <div class="pl-1">down</div>
+             </div>
+             </div>
+             </div>
+             </div>
+             </div>
+             
+        
+    <!-- voting -->
+    <div class="bg-white shadow-2xl mt-20 h-96 flex flex-row justify-center items-center lg:mx-36 md:mx-24 py-10 rounded-lg ">
+        <div class="border border-gray-400 h-32 w-10 rounded-md ">
+            <div class="flex  justify-center"><button id="increment" class="text-2xl text-gray-400 -mt-2"><i class="fas fa-caret-up"></i></button></div>
+            <div ><span class="flex flex-row justify-center text-gray-800 py-6 ">920</span></div>
+            <div class="flex justify-center"><button id="decrement" class="text-2xl text-gray-400"><i class="fas fa-caret-down"></i></button></div>
+        </div>
+    </div>
+    <script>
+        var x = 920;
+    var span = document.querySelector('span'); 
+    var increment = document.getElementById('increment'); 
+    var decrement = document.getElementById('decrement'); 
+
+    increment.addEventListener('click', function () {
+
+    span.textContent = x++;
+    });
+
+    decrement.addEventListener('click', function () {
+    span.textContent = x--;
+    });
+    </script> 
+    
+    <!-- watermark -->
+    <div class="bg-white shadow-2xl mt-20  flex flex-row justify-center items-center lg:mx-36 md:mx-24 py-20 rounded-lg ">
+        <div class="border border-gray-400  rounded-sm  relative">
+            <div class="flex flex-row justify-center items-center relative h-72 w-72">
+            <div class="text-gray-400 font-bold text-5xl transform -rotate-45 absolute select-none opacity-40">DRAFT</div>
+            </div>
+
+        <div class="text-xs absolute top-0 text-gray-400 px-14 py-5">
+        <div class=" flex flex-row justify-start mb-2">
+            <div class=" mr-1 w-4/5">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+            <div class=" mr-1 w-4/5">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+            <div class=" mr-1 w-4/5">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+            <div class=" mr-1 width: 20%;">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+            <div class=" mr-1 width: 30%;">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+           
+            
+        </div>
+        <div class=" flex flex-row justify-start mb-2">
+            <div class=" mr-1 w-4/5">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+            <div class=" mr-1 w-4/5">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+            <div class=" mr-1 w-4/5">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+            <div class=" mr-1 width: 20%;">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+            <div class=" mr-1 width: 30%;">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+            
+            </div>
+        <div class=" flex flex-row justify-start mb-2">
+        <div class=" mr-1 w-4/5">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+        <div class=" mr-1 w-4/5">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+        <div class=" mr-1 w-4/5">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+        <div class=" mr-1 width: 20%;">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+        <div class=" mr-1 width: 30%;">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+
+        </div> 
+
+        <div class=" flex flex-row justify-start mb-10">
+        <div class=" mr-1 w-4/5">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+        <div class=" mr-1 w-4/5">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+        <div class=" mr-1 w-4/5">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+        <div class=" mr-1 width: 20%;">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+        <div class=" mr-1 width: 30%;">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+
+        </div>
+        
+        <div class=" flex flex-row justify-start mb-2">
+            <div class=" mr-1 w-4/5">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+            <div class=" mr-1 w-4/5">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+            <div class=" mr-1 w-4/5">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+            <div class=" mr-1 width: 20%;">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+            <div class=" mr-1 width: 30%;">
+                <div class=" h-2 w-full"><p>lorem </p></div>
+            </div>
+    
+            </div>
+
+<div class=" flex flex-row justify-start mb-2">
+<div class=" mr-1 w-4/5">
+<div class=" h-2 w-full"><p>lorem </p></div>
+</div>
+<div class=" mr-1 w-4/5">
+<div class=" h-2 w-full"><p>lorem </p></div>
+</div>
+<div class=" mr-1 w-4/5">
+<div class=" h-2 w-full"><p>lorem </p></div>
+</div>
+<div class=" mr-1 width: 20%;">
+<div class=" h-2 w-full"><p>lorem </p></div>
+</div>
+<div class=" mr-1 width: 30%;">
+<div class=" h-2 w-full"><p>lorem </p></div>
+</div>
+
+</div>
+
+<div class=" flex flex-row justify-start mb-10">
+<div class=" mr-1 w-4/5">
+    <div class=" h-2 w-full"><p>lorem </p></div>
+</div>
+<div class=" mr-1 w-4/5">
+    <div class=" h-2 w-full"><p>lorem </p></div>
+</div>
+<div class=" mr-1 w-4/5">
+    <div class=" h-2 w-full"><p>lorem </p></div>
+</div>
+<div class=" mr-1 width: 20%;">
+    <div class=" h-2 w-full"><p>lorem </p></div>
+</div>
+<div class=" mr-1 width: 30%;">
+    <div class=" h-2 w-full"><p>lorem </p></div>
+</div>
+
+</div>
+
+<div class=" flex flex-row justify-start mb-2">
+    <div class=" mr-1 w-4/5">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+    <div class=" mr-1 w-4/5">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+    <div class=" mr-1 w-4/5">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+    <div class=" mr-1 width: 20%;">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+    <div class=" mr-1 width: 30%;">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+
+    </div>
+
+<div class=" flex flex-row justify-start mb-2">
+    <div class=" mr-1 w-4/5">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+    <div class=" mr-1 w-4/5">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+    <div class=" mr-1 w-4/5">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+    <div class=" mr-1 width: 20%;">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+    <div class=" mr-1 width: 30%;">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+
+</div>
+
+<div class=" flex flex-row justify-start mb-2">
+    <div class=" mr-1 w-4/5">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+    <div class=" mr-1 w-4/5">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+    <div class=" mr-1 w-4/5">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+    <div class=" mr-1 width: 20%;">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+    <div class=" mr-1 width: 30%;">
+        <div class=" h-2 w-full"><p>lorem </p></div>
+    </div>
+
+    </div>
+
+    <div class=" flex flex-row justify-start mb-2">
+        <div class=" mr-1 w-4/5">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+        <div class=" mr-1 w-4/5">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+        <div class=" mr-1 w-4/5">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+        <div class=" mr-1 width: 20%;">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+        <div class=" mr-1 width: 30%;">
+            <div class=" h-2 w-full"><p>lorem </p></div>
+        </div>
+
+                </div>
+     </div>
+
+
+    </div>
+    </div>
+
+    <!-- Zigzag timeline -->
+    
+    <div class="bg-white shadow-2xl mt-20   lg:mx-36 md:mx-24 py-32 rounded-lg ">
+       
+        <div class="flex items-center">
+            <div class="border-b border-r border-gray-400 h-32 w-full mx-20 lg:mx-48 flex relative"> 
+            <div class="ml-7"> <h1  class="font-bold" >lorem ipsum</h1>
+            <p class="pt-3 w-3/4 text-sm ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime repellendus deleniti excepturi aperiam animi, </p></div>
+            <div class="bg-gray-500 h-10 w-10  rounded-full absolute -right-5 top-10"></div>   
+            </div>
+        </div>
+        
+        <div class="flex items-center">
+            <div class="border-b border-l border-gray-400 h-32 w-full mx-20 lg:mx-48 flex relative"> 
+                <div class="ml-7 mt-3"> <h1  class="font-bold" >lorem ipsum</h1>
+                <p class="pt-3 w-3/4 text-sm ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime repellendus deleniti excepturi aperiam animi, </p></div>
+                <div class="bg-gray-500 h-10 w-10  rounded-full absolute top-10 -left-5"></div>   
+            </div>
+        </div> 
+        
+        <div class="flex items-center">
+            <div class="border-b border-r border-gray-400 h-32 w-full mx-20 lg:mx-48 flex relative"> 
+                <div class="ml-7 mt-3"> <h1  class="font-bold" >lorem ipsum</h1>
+                <p class="pt-3 w-3/4 text-sm ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime repellendus deleniti excepturi aperiam animi, </p></div>
+                <div class="bg-gray-500 h-10 w-10  rounded-full absolute -right-5 top-10"></div>   
+            </div>
+        </div>   
+            
+    </div>
+
+    <!-- Fixed at corner -->
+    <div class="bg-white shadow-2xl mt-20 h-96 relative lg:mx-36 md:mx-24  rounded-lg ">
+       
+        <div class="h-24 w-48 absolute top-0 left-0 overflow-hidden text-center">
+                    <div class="bg-gray-400 h-16 w-28 absolute  transform -rotate-45 -left-10  -top-4 "></div>
+            </div>
+            <div class="h-24 w-48 absolute top-0 right-0 overflow-hidden text-center">
+                <div class="bg-gray-400 h-24 w-28 absolute  transform rotate-45 -right-14  -top-10 "></div>
+            </div>
+
+            <div class="h-24 w-48 absolute bottom-0 left-0 overflow-hidden text-center">
+                <div class="bg-gray-400 h-24 w-32 absolute  transform rotate-45 -left-14 -bottom-12  "></div>
+            </div>
+
+            <div class="h-24 w-48 absolute bottom-0 right-0 overflow-hidden text-center">
+                <div class="bg-gray-400 h-24 w-32 absolute  transform -rotate-45  -right-14 -bottom-14"></div>
+            </div>
+    </div>
+
+    <!-- Folder structure -->
+
+    <div class="bg-white shadow-2xl mt-20  relative lg:mx-36 md:mx-24  rounded-lg ">
+   <div class=" flex flex-row justify-center py-10 ">
+     <div class="border-l border-gray-400  h-96 flex w-28">
+         <div>
+         <div class="flex">
+             <div class="border-t w-10 border-gray-400 mt-5 "></div>
+             <div class="bg-gray-400 h-6 w-6 rounded-md mt-2"></div>
+         </div>
+         <div class="flex ">
+            <div class="border-t w-10 border-gray-400 mt-5 "></div>
+            <div class="bg-gray-400 h-6 w-6 rounded-md mt-2"></div>
+        </div>
+        <div class="flex ">
+            <div class="border-t w-10 border-gray-400 mt-5 "></div>
+            <div class="bg-gray-400 h-6 w-6 rounded-md mt-2"></div>
+        </div>
+        <div class="flex ">
+            <div class="border-t w-10 border-gray-400 mt-5 "></div>
+            <div class="bg-gray-400 h-6 w-6 rounded-md mt-2"></div>
+        </div>
+        <div class="flex ">
+            <div class="border-t w-10 border-gray-400 mt-5 "></div>
+            <div class="bg-gray-400 h-6 w-6 rounded-md mt-2"></div>
+        </div>
+        <div class="flex ">
+            <div class="border-t w-10 border-gray-400 mt-5 "></div>
+            <div class="bg-gray-400 h-6 w-6 rounded-md mt-2"></div>
+        </div>
+        <div class="flex ">
+            <div class="border-t w-10 border-gray-400 mt-5 "></div>
+            <div class="bg-gray-400 h-6 w-6 rounded-md mt-2"></div>
+        </div>
+        <div class="flex ">
+            <div class="border-t w-10 border-gray-400 mt-5 "></div>
+            <div class="bg-gray-400 h-6 w-6 rounded-md mt-2"></div>
+        </div>
+        <div class="flex ">
+            <div class="border-t w-10 border-gray-400 mt-5 "></div>
+            <div class="bg-gray-400 h-6 w-6 rounded-md mt-2"></div>
+        </div>
+        <div class="flex ">
+            <div class="border-t w-10 border-gray-400 mt-5 "></div>
+            <div class="bg-gray-400 h-6 w-6 rounded-md mt-2"></div>
+        </div>
+        <div class="flex ">
+            <div class="border-t w-10 border-gray-400 mt-5 "></div>
+            <div class="bg-gray-400 h-6 w-6 rounded-md mt-2"></div>
+        </div>
+        <div class="flex ">
+            <div class="border-t w-10 border-gray-400 mt-5 "></div>
+            <div class="bg-gray-400 h-6 w-6 rounded-md mt-2"></div>
+        </div>
+       
+        </div>
+     </div>
+    </div>
+    </div>
+
+    <!-- Statistic -->
+
+    <div class="bg-white shadow-2xl mt-20 h-96 flex flex-row justify-center items-center lg:mx-36 md:mx-24 py-10 rounded-lg ">
+        <div class="text-gray-700 font-semi-bold ">
+            <p class="text-7xl pb-3">1,906</p>
+            <p class="text-2xl text-center uppercase">stars</p>
+        </div>
+        </div>
+
+        <!-- Status light -->
+    <div class="bg-white shadow-2xl mt-20 h-96 flex flex-row justify-center items-center lg:mx-36 md:mx-24 py-10 rounded-lg relative">
+        <div class="bg-blue-400 h-2 w-2 rounded-full mr-2"></div>
+        <div class="bg-gray-400 h-2 w-32 rounded-md"></div>
+        </div>
+
+        <!-- overlay button -->
+   
+    <div class="bg-white shadow-2xl mt-20   lg:mx-36 md:mx-24  rounded-lg flex flex-row items-center justify-center">
+        <div class="flex flex-row items-center justify-center bg-gray-300 m-2 h-96 w-full">
+        <div class="border-4 border-white flex flex-row items-center justify-center h-16 w-16 rounded-full">
+            <div class="text-white text-lg"><i class="fas fa-play"></i></div>
+        </div>
+        </div>
+        </div>
+
+        <!-- Timeline -->
+
+    <div class="bg-white shadow-2xl mt-20 h-96 flex  justify-center items-center lg:mx-36 md:mx-24 py-10 rounded-lg ">
+        <div class="text-gray-400 py-10">
+            <div class="flex lg:mx-44 md:mx-32 sm:mx-16 mx-10">
+                <div class="border-2 border-r h-72  border-gray-400  "></div>
+                <div class="relative">
+                        
+                    <div class="bg-gray-400 h-11 w-11 rounded-full absolute  -left-6 "></div>
+                    <div class="ml-10">
+                        <h1 class="font-bold">Lorem ipsum dolor sit amet</h1>
+                        <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, deserunt maxime doloribus dolores odit delectus a</p>
+                    </div>
+                   
+                <div class="bg-gray-400 h-11 w-11 rounded-full absolute -left-6 top-28"></div>
+                <div class="ml-10 mt-10">
+                    <h1 class="font-bold">Lorem ipsum dolor sit amet</h1>
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, deserunt maxime doloribus dolores odit delectus a</p>
+                </div>
+                <div class="bg-gray-400 h-11 w-11 rounded-full absolute -left-6 bottom-0"></div>
+                <div class="ml-10 mt-8">
+                    <h1 class="font-bold ">Lorem ipsum dolor sit amet</h1>
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, deserunt maxime doloribus dolores odit delectus a</p>
+                </div>
+                </div> 
+            </div>
+        
+            
+        </div>
+        </div> 
+    
+        <!-- Tree diagram -->
+   <div class="bg-white shadow-2xl mt-20 h-96 flex  justify-center items-center lg:mx-36 md:mx-24 py-10 rounded-lg ">
+    <div class="">
+        <div class="ml-36">
+           <div class="bg-gray-400 h-11 w-11 rounded-md"></div>
+           <div class="border-l border-gray-400 h-7 ml-5"></div>
+         </div>
+   <div class="border-b border-gray-400 w-80 "></div>
+   <div class="flex justify-between">
+         <div class="-ml-4">
+            <div class="border-l border-gray-400 h-5 ml-4"></div>
+            <div class="bg-gray-400 h-9 w-9 rounded-md"></div>
+            <div class="ml-1">
+                <div class="border-l border-gray-400 h-5 ml-3"></div>
+                <div class="bg-gray-400 h-7 w-7 rounded-md"></div>
+             </div>
+         </div>
+         <div class="ml-20">
+            <div class="border-l border-gray-400 h-5 ml-4"></div>
+            <div class="bg-gray-400 h-9 w-9 rounded-md"></div>
+            <div class="border-l border-gray-400 h-5 ml-4"></div>
+            <div class="border-b border-gray-400 w-40 -ml-16"></div>
+                <div class="flex justify-between -ml-3">
+                    <div class="-ml-16">
+                        <div class="border-l border-gray-400 h-5 ml-3"></div>
+                        <div class="bg-gray-400 h-7 w-7 rounded-md"></div>
+                        <div class="border-l border-gray-400 h-5 ml-3"></div>
+                        <div class="border-b border-gray-400 w-20 -ml-6"></div>
+                            <div class="flex justify-between ">
+                                <div class="-ml-8">
+                                    <div class="border-l border-gray-400 h-5 ml-2"></div>
+                                    <div class="bg-gray-400 h-5 w-5 rounded-md"></div>
+                                 </div>
+                                 <div class="-ml-2">
+                                    <div class="border-l border-gray-400 h-5 ml-2"></div>
+                                    <div class="bg-gray-400 h-5 w-5 rounded-md"></div>
+                                 </div>
+                                 <div class="-mr-3">
+                                    <div class="border-l border-gray-400 h-5 ml-2"></div>
+                                    <div class="bg-gray-400 h-5 w-5 rounded-md"></div>
+                                 </div>
+                            </div>
+                     </div>
+                     <div class="ml-8">
+                        <div class="border-l border-gray-400 h-5 ml-3"></div>
+                        <div class="bg-gray-400 h-7 w-7 rounded-md"></div>
+                        
+                     </div>
+                     <div class="-mr-5">
+                        <div class="border-l border-gray-400 h-5 ml-3"></div>
+                        <div class="bg-gray-400 h-7 w-7 rounded-md"></div>
+                        <div class="border-l border-gray-400 h-5 ml-3"></div>
+                        <div class="border-b border-gray-400 w-10 -ml-2"></div>
+                            <div class="flex justify-between">
+                                <div class="-ml-4">
+                                    <div class="border-l border-gray-400 h-5 ml-2"></div>
+                                    <div class="bg-gray-400 h-5 w-5 rounded-md"></div>
+                                 </div>
+                                 <div class="-mr-3">
+                                    <div class="border-l border-gray-400 h-5 ml-2"></div>
+                                    <div class="bg-gray-400 h-5 w-5 rounded-md"></div>
+                                 </div>
+                            </div>
+
+                     </div>
+                </div>
+         </div>
+         <div class="-mr-5">
+            <div class="border-l border-gray-400 h-5 ml-4"></div>
+            <div class="bg-gray-400 h-9 w-9 rounded-md"></div>
+         </div>
+         </div>
+
+
+
+   </div>
+
+</div>
+
+<!-- Teardrop -->
+   <div class="bg-white shadow-2xl mt-20 h-96 flex  justify-center items-center lg:mx-36 md:mx-24 py-10 rounded-lg ">
+    <div class="border-2 border-gray-400 h-16 w-16 rounded-tl-full rounded-bl-full rounded-br-full transform -rotate-45 flex flex-row justify-center items-center">
+        <div class="bg-gray-400 h-4 w-4 rounded-full"></div>
+    </div>
+    </div>
+
+    <!-- Three dimensions card -->
+   <div class="bg-white shadow-2xl mt-20 h-96 flex  justify-center items-center lg:mx-36 md:mx-24 py-10 rounded-lg ">
+  <div>
+      <div class="flex">
+    <div class="bg-gray-400 w-5 h-36 transform -skew-y-12"></div>
+    <div class="border border-gray-400 w-64 h-32"></div>
+    </div>
+   <div class="bg-gray-400 h-5 w-64 transform -skew-x-12 ml-4 -mt-4 pl-10"></div>
+   </div>
+    </div>
+</body>
+</html>
