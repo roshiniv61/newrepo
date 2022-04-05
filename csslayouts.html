@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>csslayouts</title>
+    <link rel="stylesheet" href="style.css" />
+
+  <!--  <link rel="stylesheet" href="build/tailwind.css" />-->
+
+    <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+</head>
+<body class="   ">
+<!--Accordion-->
+    <div class="flex items-center justify-center  my-10 ">
+        <div class="w-3/5 h-screen bg-gray-100 ">       
+            <h1 class="h1-header ">Accordion</h1>
+
+            <div x-data="accordion" class="w-full max-w-lg mx-auto ">
+                <!--ad 1-->
+                <div class="w-full bg-white border-b border-gray-400 ">
+                    <!--head-->
+                    <div @click="selected !== 1 ? selected =1 : selected = null" class="flex items-center border-t  px-2 border-gray-400">
+                        <img class="h-5 w-5 transition-all duration-300 " x-bind:class="selected ==1? 'transform rotate-90':''" src="https://img.icons8.com/material-outlined/24/000000/sort-right.png"/>
+
+                        <h1 class="py-2"> Accordion 1 </h1>
+                    </div>
+                    <!--content-->
+                    <div class="max-h-0 overflow-hidden transition-all duration-300" x-ref="tab1"
+                     :style="selected == 1 ?'max-height: '+ $refs.tab1.scrollHeight +  'px;':''">
+                        <p class=" p-2 text-justify">We know that in order to produce the best product, you need the best employees.
+                            That is why people come first with us, before the product. We are always looking for 
+                            ambitious and motivated people to strengthen our family team.
+                       </p>
+                    </div>
+                </div>
+                 <!--ad 2-->
+                <div class="w-full bg-white border-b border-gray-400 ">
+                    <!--head-->
+                    <div @click="selected !== 2 ? selected = 2 : selected = null" class="flex  items-center border-t  px-2 border-gray-400">
+                        <img class="h-5 w-5 transition-all duration-300 " x-bind:class="selected ==2? 'transform rotate-90':''" src="https://img.icons8.com/material-outlined/24/000000/sort-right.png"/>
+                        <h1 class="py-2"> Accordion 2 </h1>
+                    </div>
+                    <!--content-->
+                    <div class="max-h-0 overflow-hidden transition-all duration-300" x-ref="tab2"
+                     :style="selected == 2 ?'max-height: '+ $refs.tab2.scrollHeight +  'px;':''">
+                        <p class=" p-2 text-justify">We know that in order to produce the best product, you need the best employees.
+                            That is why people come first with us, before the product. We are always looking for 
+                            ambitious and motivated people to strengthen our family team.
+                       </p>
+                    </div>
+                </div>
+            </div>
+<script>
+    function accordion(){
+        return{
+            selected : null
+        }
+    }
+</script>
+
+            </div>
+            </div>
+<!--Accordion close-->  
+
+ <!--Accordion with tailwind components-->
+    <div class="flex items-center justify-center  my-10 ">
+        <div class="w-3/5 h-96  bg-gray-100 ">
+              <h1 class="text-center m-5 font-bold underline">Accordion</h1>
+
+              <div class="  m-10 ">
+        <details >
+            <summary class=""> A STRONG TEAM.  </summary>
+            <p >We know that in order to produce the best product, you need the best employees.
+                 That is why people come first with us, before the product. We are always looking for 
+                 ambitious and motivated people to strengthen our family team.
+            </p>
+        </details>
+        <details>
+        <summary > A STRONG TEAM.  </summary>
+        <p >We know that in order to produce the best product, you need the best employees.
+             That is why people come first with us, before the product. We are always looking for 
+             ambitious and motivated people to strengthen our family team.
+        </p>
+    </details>
+    <details >
+        <summary class=""> A STRONG TEAM.  </summary>
+        <p >We know that in order to produce the best product, you need the best employees.
+             That is why people come first with us, before the product. We are always looking for 
+             ambitious and motivated people to strengthen our family team.
+        </p>
+    </details>
+    <details >
+        <summary class=""> A STRONG TEAM.  </summary>
+        <p >We know that in order to produce the best product, you need the best employees.
+             That is why people come first with us, before the product. We are always looking for 
+             ambitious and motivated people to strengthen our family team.
+        </p>
+    </details></div>
+
+    </div></div>
+    <!--Accordion with tailwind components close-->
+
+    <!--question_and_ans-->
+    <div class="flex items-center justify-center  my-10 ">
+        <div class="w-3/5 h-screen bg-gray-100 ">       
+            <h1 class="text-center m-5 font-bold underline">Question and Answer</h1>
+
+            <div x-data="accordion" class="w-full max-w-lg mx-auto ">
+                <!--ad 1-->
+                <div class="w-full bg-white border-b border-gray-400 ">
+                    <!--head-->
+                    <div @click="selected !== 1 ? selected =1 : selected = null" class="flex justify-between items-center border-t  px-2 border-gray-400">
+                       <h1 class="py-2"> Accordion 1 </h1>
+                       <img class="h-5 w-5 transition-all duration-300 " x-bind:class="selected == 1? 'transform rotate-180':''" src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/24/000000/external-arrow-arrows-those-icons-lineal-color-those-icons-1.png"/>
+                    </div>
+                    <!--content-->
+                    <div class="max-h-0 overflow-hidden transition-all duration-300" x-ref="tab1"
+                     :style="selected == 1 ?'max-height: '+ $refs.tab1.scrollHeight +  'px;':''">
+                        <p class=" p-2 text-justify">We know that in order to produce the best product, you need the best employees.
+                            That is why people come first with us, before the product. We are always looking for 
+                            ambitious and motivated people to strengthen our family team.
+                       </p>
+                    </div>
+                </div>
+                 <!--ad 2-->
+                <div class="w-full bg-white border-b border-gray-400 ">
+                    <!--head-->
+                    <div @click="selected !== 2 ? selected = 2 : selected = null" class="flex   justify-between items-center border-t  px-2 border-gray-400">
+                       <h1 class="py-2"> Accordion 2 </h1>
+                       <img class="h-5 w-5 transition-all duration-300 " x-bind:class="selected == 2? 'transform rotate-180':''" src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/24/000000/external-arrow-arrows-those-icons-lineal-color-those-icons-1.png"/>
+                    </div>
+                    <!--content-->
+                    <div class="max-h-0 overflow-hidden transition-all duration-300" x-ref="tab2"
+                     :style="selected == 2 ?'max-height: '+ $refs.tab2.scrollHeight +  'px;':''">
+                        <p class=" p-2 text-justify">We know that in order to produce the best product, you need the best employees.
+                            That is why people come first with us, before the product. We are always looking for 
+                            ambitious and motivated people to strengthen our family team.
+                       </p>
+                    </div>
+                </div>
+            </div>
+<script>
+    function accordion(){
+        return{
+            selected : null
+        }
+    }
+</script>
+
+            </div>
+            </div>
+
+    <!--question_and_ans close-->
+<!--arrow buttons-->
+<div class="flex items-center justify-center h-full my-10 ">
+    <div class="w-3/5  bg-gray-100 ">       
+        <h1 class="text-center m-5 font-bold underline">Arrow buttons</h1>
+        <div class="flex flex-wrap justify-around items-center ">
+            <div class="">
+                
+     <div class="ml-16">
+        <button class="button text-black active:bg-blue-400 p-2 border border-gray-400 flex items-center justify-around m-5 ml-5">
+            <div class="button__arrow button__arrow--up bg-transparent 
+             border-l-2 border-t-2  border-black
+             transform translate-y-2.5 rotate-45 w-3 h-3 mr-2 mb-3 ">
+            </div>Up 
+        </button> 
+    </div> 
+
+<div class="flex justify-around ">
+    <div class="">
+        <button class="button text-black  p-2 border border-gray-400 flex items-center mr-20">
+            <div class="button__arrow button__arrow--left bg-transparent 
+             border-b-2 border-l-2  border-black
+             transform  translate-x-2.5 rotate-45 w-3 h-3 mr-3">
+            </div> left 
+        </button>
+    </div>
+    <div class="">
+        <button class="button text-black  p-2 border border-gray-400 flex items-center  ml-5">
+                <div class="button__arrow button__arrow--right bg-transparent 
+                 border-r-2 border-t-2  border-black
+                 transform  -translate-x-2.5 rotate-45 w-3 h-3 ml-2 ">
+                </div>right 
+            </button>  
+    </div>
+        </div>
+        <div class="ml-14">
+            <button class="button text-black  p-2 border border-gray-400 flex items-center  m-5 ml-5">
+                <div class="button__arrow button__arrow--down bg-transparent 
+                 border-b-2 border-r-2  border-black
+                 transform  -translate-y-2.5 rotate-45 w-3 h-3 mr-2 mt-3">
+                </div>down 
+            </button>
+        </div>
+            </div>
+            </div>
+</div></div>
+    <!--arrow buttons close-->
+    
+
+<!--avatar image-->
+<div class="flex items-center justify-center h-full my-10 ">
+<div class="w-3/5  bg-gray-100 ">
+<h1 class="text-center m-5 font-bold underline">Avatar image</h1>
+         <div class="flex justify-center items-center pb-2">
+         <div class="bg-gray-100 mx-4 my-10  p-5 rounded-xl items-center   ">
+
+         <div class="w-16 h-16   rounded-full">
+            <img class="avatar__image w-full h-full rounded-full" src="laptop-2562325_640-300x200.jpg" >
+       
+         </div>
+
+    </div>
+    </div>
+    </div></div>
+    <!--avatar image close-->
+
+<!--avatar images-->
+
+
+<div class="flex items-center justify-center h-full my-10 ">
+<div class="w-3/5  bg-gray-100 ">
+<h1 class="text-center m-5 font-bold underline">Avatar images</h1>
+         <div class="flex justify-center items-center pb-2">
+
+        <div class="avatars flex">
+            <!-- Avatar item -->
+            <div class="avatars__item -ml-4">
+                <div class="avatars__image shadow-xl rounded-full w-16 h-16">
+                    <!-- Image --><img class="avatar__image w-full h-full rounded-full" src="laptop-2562325_640-300x200.jpg" >
+                </div>
+            </div>
+              <!-- Avatar item -->
+              <div class="avatars__item -ml-4">
+                <div class="avatars__image shadow-xl rounded-full w-16 h-16">
+                    <!-- Image --><img class="avatar__image w-full h-full rounded-full" src="laptop-2562325_640-300x200.jpg" >
+                </div>
+            </div>
+              <!-- Avatar item -->
+              <div class="avatars__item -ml-4">
+                <div class="avatars__image shadow-xl rounded-full w-16 h-16">
+                    <!-- Image --><img class="avatar__image w-full h-full rounded-full" src="laptop-2562325_640-300x200.jpg" >
+                </div>
+            </div>
+       </div>
+
+    </div>
+    </div>
+    </div>
+ <!--avatar images close-->
+
+<!--Badge-->
+<div class="flex items-center justify-center h-full my-10 ">
+<div class="w-3/5  bg-gray-100 ">
+<h1 class="text-center m-5 font-bold underline">Badge</h1>
+        <div class="flex justify-center items-center pb-2">
+                                    <div class="badge items-center  justify-center bg-gray-500 text-white rounded-full h-8 w-8">
+                                       cart
+                                    </div>
+                              </div>
+           </div>
+</div>
+<!--Badge close-->
+
+<!--card-->
+<div class="flex items-center justify-center h-full my-10 ">
+<div class="w-3/5  bg-gray-100 ">
+<h1 class="text-center m-5 font-bold underline">card</h1>
+      <div class="flex  justify-center items-center m-10   pb-2">
+                         <div class="card flex flex-col border-2 border-black rounded-xl lg:w-1/2 w-3/5">
+                             <!-- Cover -->
+                             <div class="card__cover w-full h-150px ">
+                                 
+                                 <div class="bg-gray-500 w-full h-32 text-center text-white rounded-t-xl">...cover(image)</div>
+                         
+                             </div>
+                         
+                             <!-- Content -->
+                             <div class="card__content flex-1 p-4">
+                                ...(content)
+                                We know that in order to produce the best product, you need the best employees.
+                 That is why people come first with us, before the product.
+                               
+                             </div>
+                            <div class="p-4">
+                             <button class="button text-white  bg-gray-500 hover:bg-gray-700 p-2 border border-gray-400  ">
+                                    button</button>
+                                </div>  
+                         </div>
+     </div>
+
+</div>
+
+</div>
+<!--card close-->
+<!--close button -->
+<div class="flex items-center justify-center h-full my-10 ">
+<div class="w-3/5  bg-gray-100 ">
+<h1 class="text-center m-5 font-bold underline">Close button</h1>
+<div class="flex m-5 justify-evenly items-center pb-10">
+<div>
+<button class="border border-blue-800 text-blue-900 font-semibold text-6xl">&times;</button>
+</div>
+<div>
+<button class="p-2 ring-2  rounded-sm hover:ring-blue-600
+transition duration-500 ease-in-out transform hover:-translate-y-3 hover:scale-110 ...">
+   close 
+  </button>
+</div>
+<div>
+  <button type="button" class="bg-rose-600 ..." disabled>
+    <img class="animate-spin  h-10 w-10 mr-3 ..." viewBox="0 0 24 24"
+        src="https://cdn-icons-png.flaticon.com/512/1/1702.png">
+    Processing
+  </button>
+</div>
+     <div>
+             <button class="button bg-transparent border border-gray-500 cursor-pointer h-8 w-8 relative">
+                 <div class="button__line  bg-black absolute h-1 w-full 
+                  button__line--first left-0 to/2 transform -translate-y-1/2 rotate-45  "></div>
+             
+                 <div class="button__line bg-black absolute h-full w-1  
+                 button__line--second left-1/2 top-0  transform -translate-x-1/2 rotate-45"></div>
+             </button>
+       </div>
+</div>
+</div>
+</div>
+<!--close button end -->
+
+<!--color swatch-->
+<div class="flex items-center justify-center h-full my-10 ">
+<div class="w-3/5  bg-gray-100 ">
+<h1 class="text-center m-5 font-bold underline">Color swatch</h1>
+   
+<div class="flex flex-row justify-center items-center ">
+        <div class="swatch flex flex-wrap">
+        <div class="swatch__item rounded-full h-6 w-6 p-2 m-2    bg-gray-400"></div>
+        <div class="swatch__item rounded-full h-6 w-6 p-2 m-2    bg-gray-500"></div>
+        <div class="swatch__item rounded-full h-6 w-6 p-2 m-2    bg-gray-600"></div>
+
+    <!-- Repeat other items -->
+    ...
+         </div>
+    </div>
+</div>
+</div>
+<!--color swatch close-->
+
+<!-- concave corners -->
+<div class="flex items-center justify-center h-full my-10 ">
+<div class="w-3/5  bg-gray-100 p-5">
+<h1 class="text-center m-5 font-bold underline">Concave corners</h1>
+
+    <div class="concave-corners bg-gray-600 ">
+        <!-- The top-left corner -->
+        <div class="concave-corners__corner concave-corners__corner--tl"></div>
+    
+        <!-- The top-right corner -->
+        <div class="concave-corners__corner concave-corners__corner--tr"></div>
+    
+        <!-- The bottom-left corner -->
+        <div class="concave-corners__corner concave-corners__corner--bl"></div>
+    
+        <!-- The bottom-right corner -->
+        <div class="concave-corners__corner concave-corners__corner--br"></div>
+    
+        <!-- Content -->
+        ...
+    </div>
+
+</div>
+</div>
+</div>
+
+<!-- concave corners close -->
+
+
+<!-- Docked-->
+<div class="flex items-center justify-center h-full my-10 ">
+<div class="w-3/5 bg-gray-200 p-5">
+<h1 class="text-center m-5 font-bold underline">docker</h1>
+
+  <div class=" relative border border-gray-600 m-20 p-20">
+    <!-- Docked at the top right corner -->
+    <div class=" absolute right-0 top-0 transform translate-x-1/2 -translate-y-1/2 items-center flex justify-center  ">
+        <div class=" items-center  justify-center bg-gray-500 text-white rounded-full h-4 w-4">
+           
+        </div>
+    </div>
+
+    ...
+</div>
+</div>
+</div>
+<!-- Docked close-->
+
+
+<!--dot leader-->
+<div class="flex items-center justify-center h-full my-10 ">
+<div class="w-3/5 bg-gray-200 p-5">
+<h1 class="text-center m-5 font-bold underline">Dot leader</h1>
+    <div class="container items-center flex justify-center mx-0">
+    <!-- Left side -->
+    <div class="flex-1">...We know that in order to produce the best product, you need the best employees.
+         </div>
+    <!-- Dots -->
+    <div class="container__dots border-b-4  border-dotted border-gray-500 flex-1 mx-0 my-4"></div>   
+    <!-- Right side -->
+    <div class=" items-center  justify-center bg-gray-400 text-white rounded-full h-6 w-6"></div>
+  </div>
+  <div class="container items-center flex justify-center ">
+    <!-- Left side -->
+    <div class="flex-1">......We know that in order to produce the best product, you need the best employees.  </div>
+    <!-- Dots -->
+    <div class="container__dots border-b-4  border-dotted border-gray-500 flex-1 mx-0 my-4"></div>   
+    <!-- Right side -->
+    <div class=" items-center  justify-center bg-gray-400 text-white rounded-full h-6 w-6"></div>
+   </div>
+</div>
+</div>
+<!--dot leader close-->
+
+<!-- drop area-->
+<div class="flex items-center justify-center h-full my-10 ">
+   
+    <div class="w-3/5 bg-gray-200 p-5">
+    <h1 class="text-center m-5 font-bold underline">Drop area</h1>
+<div class="container items-center flex justify-center border-4 border-dashed border-gray-500 ">
+    ...
+    <div class="flex flex-row justify-center items-center relative h-72 w-72">
+    <div class="text-gray-400 font-bold text-5xl  absolute select-none opacity-40">DROP HERE</div>
+    </div>
+    ...
+</div>
+</div>
+</div>
+<!-- drop area close -->
+
+<!-- drop cap-->
+<div class="flex items-center justify-center h-full my-10 ">
+   
+    <div class="w-3/5 bg-gray-200 p-5">
+    <h1 class="text-center m-5 font-bold underline">Drop cap</h1>
+<div class="container ">
+   <div class="float-left leading-3 m-1 mb-0 pb-8 px-2 pt-4 font-bold text-7xl border-4 border-gray-500">w</div> 
+   e know that in order to produce the best product,
+   know that in order to produce the best product,
+   know that in order to produce the best product,
+</div>
+</div>
+</div>
+<!-- drop cap close-->
+
+<!-- fading long section-->
+<div class="flex items-center justify-center h-full my-10 ">
+   
+    <div class="w-3/5 bg-gray-200 p-5">
+    <h1 class="text-center m-5 font-bold underline">Fading long section</h1>
+<div class=" relative ">
+    <!-- Main content -->
+    <div class="container__content h-48  w-full overflow-y-scroll">
+        ...wjiddddddddddddwe know that in order to produce the best product, know that in order to produce the best product, know that in order to produce the best product,
+        ...wjiddddddddddddwe know that in order to produce the best product, know that in order to produce the best product, know that in order to produce the best product,
+        ...wjiddddddddddddwe know that in order to produce the best product, know that in order to produce the best product, know that in order to produce the best product,
+        ...wjiddddddddddddwe know that in order to produce the best product, know that in order to produce the best product, know that in order to produce the best product,
+        ...wjiddddddddddddwe know that in order to produce the best product, know that in order to produce the best product, know that in order to produce the best product,
+        ...wjiddddddddddddwe know that in order to produce the best product, know that in order to produce the best product, know that in order to produce the best product,
+        ...wjiddddddddddddwe know that in order to produce the best product, know that in order to produce the best product, know that in order to produce the best product,
+        ...wjiddddddddddddwe know that in order to produce the best product, know that in order to produce the best product, know that in order to produce the best product,
+        ...wjiddddddddddddwe know that in order to produce the best product, know that in order to produce the best product, know that in order to produce the best product,
+        ...wjiddddddddddddwe know that in order to produce the best product, know that in order to produce the best product, know that in order to produce the best product,
+        ...wjiddddddddddddwe know that in order to produce the best product, know that in order to produce the best product, know that in order to produce the best product,
+        ...wjiddddddddddddwe know that in order to produce the best product, know that in order to produce the best product, know that in order to produce the best product,
+        ...wjiddddddddddddwe know that in order to produce the best product, know that in order to produce the best product, know that in order to produce the best product,
+        ...wjiddddddddddddwe know that in order to produce the best product, know that in order to produce the best product, know that in order to produce the best product,
+    </div>
+
+    <!-- The faded element -->
+    <div class="container__fading bottom-0 left-0 absolute w-5 h-full  "></div>
+</div>
+</div>
+</div>
+
+<!-- fading long section close-->
+
+<!--feature comparision-->
+<div class="flex items-center justify-center h-full my-10 ">
+
+<div class="w-3/5 bg-gray-200">
+     <h1 class="text-center m-5 font-bold underline">feature comparision</h1>
+    <div class="container items-center flex border-b border-gray-400 px-0.5 py-0  ">
+        <!-- Feature name -->
+        <div class="container__feature flex-1 mr-4">
+            ...feature Name
+        </div>
+    
+        <!-- The model -->
+        <div class="container__model flex justify-center mr-4">
+            <!--
+            For the first row: display the model name (Basic, Pro, etc.)
+            From the second row: display a yes/no icon indicating the feature is available or not
+            -->
+            ...model
+        </div>
+    
+        <!-- Repeated other models -->
+        ...yes/no
+    </div>
+  
+    
+    <!-- Repeated items -->
+    ...
+    ...
+    
+</div>
+</div>
+<!--feature comparision close-->
+
+<!--Feature list -->
+
+
+<!-- Feature item -->
+<div class="flex items-center justify-center h-full ">
+   
+    <div class="w-3/5 bg-gray-200 p-5">
+         <h1 class="text-center m-5 font-bold underline">feature list</h1>
+<div class="container flex  mb-22">
+    <!-- Image -->
+    <div class="container__image w-32 ">
+        <div class="my-4">
+        ...  <div class=" shadow-xl rounded-full bg-gray-500 h-32 w-32">    
+             </div> 
+       </div>
+    </div>
+
+    <!-- Right side -->
+    <div class="container__feature flex-1 lg:m-10 m-2">
+        <div class="mb-22">
+            <h1 class="font-bold">FEATURE </h1>
+        </div>
+        <div class="flex flex-wrap justify-start w-full">
+        ... ddddddddwe know that in order to produce the best product, 
+        know that in order to produce the best product, know that in order to produce the best product,
+        </div>
+    </div>
+</div>
+
+
+<div class="container flex flex-row-reverse mb-22">
+    <!-- Image -->
+    <div class="container__image w-32 ">
+        <div class="my-4">
+        ...  <div class="avatars__image shadow-xl rounded-full bg-gray-500 h-32 w-32">    
+             </div> 
+       </div>
+    </div>
+
+    <!-- Right side -->
+    <div class="container__feature flex-1 lg:m-10 m-2">
+        <div class="mb-22">
+            <h1 class="font-bold">FEATURES</h1>
+        </div>
+        <div class="flex flex-wrap justify-start w-full">
+        ... ddddddddwe know that in order to produce the best product, 
+        know that in order to produce the best product, know that in order to produce the best product,
+        </div>
+    </div>
+</div>
+
+
+<!-- Repeated items -->
+...
+</div>
+</div>
+
+<!--Feature list close -->
+
+
+<!--Fixed at corner-->
+<div class="flex items-center justify-center h-full my-10 ">
+   
+    <div class="w-3/5 bg-gray-200 p-5">
+    <h1 class="text-center m-5 font-bold underline">Fixed at corner</h1>
+<div class="container relative bg-gray-100 ">
+    <!-- Top-left corner -->
+    <div class="container__corner container__corner--tl absolute left-0 top-0 ">
+        <div class=" border-l-8 border-b-8 border-r-0  border-t-0 border-gray-400 w-5 h-5  transform -rotate-90"></div>
+    </div>
+
+    <!-- Top-right corner -->
+    <div class="container__corner container__corner--tr absolute top-0 right-0 ">
+                <div class=" border-l-8 border-b-8 border-r-0  border-t-0 border-gray-400 w-5 h-5 "></div>
+
+    </div>
+
+    <!-- Bottom-right corner -->
+    <div class="container__corner container__corner--br absolute bottom-0 right-0 ">
+        <div class=" border-l-8 border-b-8 border-r-0  border-t-0 border-gray-400 w-5 h-5  transform rotate-90 "></div>
+
+    </div>
+
+    <!-- Bottom-left corner -->
+    <div class="container__corner container__corner--bl absolute bottom-0 left-0 ">    
+                <div class=" border-t-8 border-r-8 border-l-0  border-b-0 border-gray-400 w-5 h-5 "></div>
+
+    </div><div class="text-center">
+    shajbsjknkj</br>
+    shajbsjknkj</br>
+    shajbsjknkj</br>
+    shajbsjknkj</br></div>
+</div>
+</div>
+</div>
+<!--Fixed at corner close-->
+
+
+
+
+
+
+
+
+<!--Fixed at side-->
+<div class="flex items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-200 p-5">
+        <h1 class="text-center m-5 font-bold underline">Fixed at side</h1>
+        <div class="h-screen relative w-full">
+            <div class="right-0 absolute h-32 w-10 top-1/2 transform -translate-y-1/2 bg-gray-500"></div>
+        </div>
+ </div>
+</div>
+
+<!--Fixed at side close-->
+
+
+
+
+<!-- centering-->
+<div class="flex items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-200 p-5">
+        <h1 class="text-center m-5 font-bold underline">Items centering</h1>
+        <div class="items-center flex flex-col justify-center">
+            <div class="container__image w-32 ">
+                <div class="my-4">
+                ...  <div class=" shadow-xl rounded-full bg-gray-500 h-32 w-32">    
+                     </div> 
+               </div>
+            </div>
+            <div class=" mt-4 w-2/5">
+                know that in order to produce the best product,            </div>
+            <div class=" mt-4 w-1/3">
+                know that in order to produce the best            </div>
+            <div class=" mt-4 w-1/5">
+                know that in order to           </div>
+
+        </div>
+    </div>
+</div>
+<!-- centering close-->
+
+<!--full background-->
+  <section class="flex bg-cover bg-opacity-25  min-h-screen "
+style="background-image: url( laptop-2562325_640-300x200.jpg );" >
+    <div class="container mx-auto 0 text-black">
+        <div class=" bottom-3/4 flex justify-center">
+            <h2 class="text-4xl font-bold"></h2>
+            <h2 class="text-4xl font-bold">OUR VALUES.</h2>
+        </div>
+     </div>
+  </section>
+<!--full background close-->
+
+<!--keyboard-shortcut-->
+<div class="flex items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-200 p-5">
+        <h1 class="text-center m-5 font-bold underline">kbd</h1>
+        <div class=" flex flex-col justify-center items-center">
+            <div>
+            <kbd class="container bg-gray-400  border-none border-gray-600 rounded shadow-2xl p-2  ">
+                   ⌘ + C
+                  </kbd>
+            </div> 
+        </div>   
+</div>
+</div>
+<!--keyboard-shortcut close-->
+
+
+
+<!-- media object-->
+<div class="flex items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-200 p-5">
+        <h1 class="text-center m-5 font-bold underline"> media object</h1>
+<div class="container items-start lg:flex h-full p-8 ">
+    <!-- Media object -->
+    <div class="container__media  mr-4 w-32">
+        ...<div class="avatars__image shadow-xl rounded bg-gray-500 h-32 w-32">    
+        </div> 
+    </div>
+
+    <!-- Main content -->
+    <div class="container__content flex-1">
+        <div class="mb-4">
+            heading
+        </div>
+        <div class="mb-4">
+            ... Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+        </div>
+   <div class="mb-4">
+    ... Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+  </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- media object-->
+
+<!-- vedio background
+       
+<div class="flex items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-200 p-5">
+        <h1 class="text-center m-5 font-bold underline"> vedio</h1>
+        <div class="container relative bg-gray w-full ">
+        <div class="left-0 top-0 absolute h-full w-full overflow-hidden bg-black text-white ">
+           
+
+            <vedio  class="object-cover w-full  absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2 "
+             src="VID_20200306_152346.mp4" type="video/mp4">
+            </vedio> 
+            
+            
+             <img src="https://img.icons8.com/external-bearicons-detailed-outline-bearicons/64/000000/external-play-essential-collection-bearicons-detailed-outline-bearicons.png"/>
+                <img src="https://img.icons8.com/external-bearicons-detailed-outline-bearicons/64/000000/external-pause-essential-collection-bearicons-detailed-outline-bearicons.png"/>
+
+           
+        </div> 
+                       
+       </div>
+    </div>
+</div>-->
+       
+        
+<!-- vedio player close-->
+
+<!-- price table-->
+<div class="flex items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-200 p-5">
+        <h1 class="text-center m-5 font-bold underline">price table</h1>
+
+        <div class=" lg:flex  lg:flex-row  ">
+         <div class="flex flex-col border border-gray-500 items-center  justify-center mx-2 p-4 rounded my-6"> 
+                <a href="" > <h4 class="mb-3  text-lg ">          HEADING           </h4></a>
+             <div class="flex-shrink-0 bg-gray-200 ">    <div class="border border-black rounded-full bg-gray-400 h-24 w-24 p-4"> </div>
+             </div>
+             <div class="flex-1 m-5  flex flex-col justify-between items-center">
+               <div class="flex-1">             
+                <p class="text-base text-center"> Spindles with rotary feedthrough for coolant,
+                     MQL, ATS, air or with vacuum suction. In addition, spindles with HSK-T shaft and clamping of the spindle shaft. 
+                </p> 
+              </div>        
+              <div class="p-4 "> <button class="button text-black rounded p-2 border border-gray-400 bg-gray-400 flex items-center">
+                button
+            </button></div>
+            </div>
+        </div>
+                
+        <div class="flex flex-col border border-gray-500 items-center  justify-center mx-2 p-4 rounded hover:shadow-2xl hover:transform hover:scale-x-50 "> 
+            <a href="" > <h4 class="mb-3  text-lg ">          HEADING           </h4></a>
+         <div class="flex-shrink-0 bg-gray-200 ">    <div class="border border-black rounded-full bg-gray-400 h-24 w-24 p-4"> </div>
+         </div>
+         <div class="flex-1 m-5  flex flex-col justify-between items-center">
+           <div class="flex-1">             
+            <p class="text-base text-center"> Spindles with rotary feedthrough for coolant,
+                 MQL, ATS, air or with vacuum suction. In addition, spindles with HSK-T shaft and clamping of the spindle shaft. 
+            </p> 
+          </div>        
+          <div class="p-4 "> <button class="button text-black rounded p-2 border border-gray-400 bg-gray-400 flex items-center">
+            button
+        </button></div>
+        </div>
+    </div>
+
+    <div class="flex flex-col border border-gray-500 items-center  justify-center mx-2 p-4 rounded my-6"> 
+        <a href="" > <h4 class="mb-3  text-lg ">          HEADING           </h4></a>
+     <div class="flex-shrink-0 bg-gray-200 ">    <div class="border border-black rounded-full bg-gray-400 h-24 w-24 p-4 "> </div>
+     </div>
+     <div class="flex-1 m-5  flex flex-col justify-between items-center">
+       <div class="flex-1">             
+        <p class="text-base text-center"> Spindles with rotary feedthrough for coolant,
+             MQL, ATS, air or with vacuum suction. In addition, spindles with HSK-T shaft and clamping of the spindle shaft. 
+        </p> 
+      </div>        
+      <div class="p-4 "> <button class="button  text-black rounded p-2 border border-gray-400 bg-gray-400 flex items-center">
+        button
+    </button></div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!--price table close-->
+<!--price tag -->
+<div class="flex items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-200 p-5">
+        <h1 class="text-center m-5 font-bold underline">price tag</h1>
+        <div class="flex flex-col items-center justify center">
+            <div>
+                pricetag svg
+            </div>
+        </div>
+        </div>
+        </div>
+<!--price tag close-->
+
+
+<!--Property list-->
+<div class="flex items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-200 p-5">
+        <h1 class="text-center m-5 font-bold underline">Property list</h1>
+        <div class=" items-center flex border-b border-gray-400 px-0.5 py-0  ">
+            <div class="flex-1 mr-4">Name</div>
+            <div class="flex justify-center mr-4">WebAssembly in Action</div>
+        </div>
+
+        <div class=" items-center flex border-b border-gray-400 px-0.5 py-0  ">
+            <div class="flex-1 mr-4">Name</div>
+            <div class="flex justify-center mr-4">WebAssembly in Action</div>
+        </div>
+
+        <div class=" items-center flex border-b border-gray-400 px-0.5 py-0  ">
+            <div class="flex-1 mr-4">Name</div>
+            <div class="flex justify-center mr-4">WebAssembly in Action</div>
+        </div>     
+
+
+    </div>
+ </div>
+<!--Property list close-->
+
+
+
+<!--separator-->
+<div class="flex flex-col items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-200 p-5">
+        <h1 class="text-center m-5 font-bold underline">Seperator</h1>
+<div class="container__separator flex items-center flex-col h-full justify-center p-8">
+
+    <div class="items-center flex relative w-3/5 ">
+                 <div class="bg-gray-200 left-1/2 py-0 px-2 absolute transform -translate-x-1/2 -translate-y-1/2 uppercase"> 
+                   <!--heading--> 
+                    <div class="w-20 ">
+                             <div class=" h-8 w-full border-10 bg-gray-600 border-gray-900 rounded"></div>
+                      </div>
+                </div>
+                <div class="border-b-2 border-solid border-gray-600 h-1 w-full mb-7"></div>
+            </div>  
+</div>
+</div></div>
+
+<!--separator close-->
+<!--layerd_cards-->
+<div class="flex flex-col items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-200 p-5">
+        <h1 class="text-center m-5 font-bold underline">layerd_cards</h1>
+<!--
+<div class="container mx-auto">
+<div class=" h-96 w-full bg-red-400 rounded relative top-80 -right-10 "></div>
+<div class=" h-96 w-full bg-blue-400 rounded relative z-10"></div>
+<div class=" h-96 w-full bg-yellow-400 rounded relative -top-80 right-10 "></div>
+
+</div>-->  
+        <div class="min-h-screen flex items-center justify-center">
+<div class="relative bg-gray-800 rounded-xl w-64  h-52">
+    <div class="absolute -left-10 -top-5 bg-yellow-500 h-full w-full rounded-xl"></div>
+</div>
+</div>  
+</div>
+</div>
+<!--Stacked_cards-->
+<div class="flex flex-col items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-200 p-5">
+        <h1 class="text-center m-5 font-bold underline">Stacked_cards</h1>
+<div class="min-h-screen flex items-center justify-center">
+    <div class="relative border-2 border-gray-700 rounded-xl w-64  h-52">
+        <div class="absolute transform rotate-6 border-2 border-gray-700  h-full w-full rounded-xl"></div>
+        <div class="absolute transform rotate-12 border-2 border-gray-700  h-full w-full rounded-xl"></div>
+        
+    </div>
+    </div> 
+    </div>
+    </div>
+    
+  <!--Stacked_cardsclose-->  
+
+<!--status light-->
+<div class="flex items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-200 p-5">
+        <h1 class="text-center m-5 font-bold underline">status light</h1>
+      
+        <div class="flex flex-col items-center justify-center">
+        <div class="items-center flex">
+    <div class=" bg-red-400 rounded-full border-2 h-3 w-3 mr-2 "></div> 
+    <div class="flex-1">aaaaaaaaaaaaaa</div>
+</div>
+<div class="items-center flex">
+    <div class=" bg-gray-400 rounded-full border-2 h-3 w-3 mr-2 "></div> 
+    <div class="flex-1">aaaaaaaaaaaaaa</div>
+</div>
+</div></div>
+</div>
+<!--status light close-->
+
+<!--statistic-->
+<div class="flex items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-200 p-5">
+        <h1 class="text-center m-5 font-bold underline">statistic</h1>
+
+<div class="items-center flex flex-col">
+    <div class="font-bold text-2xl">5,253</div>
+    <div class="font-semibold text-sm uppercase">stars</div>
+</div>
+
+
+</div>
+</div>
+<!--statistic close-->
+
+
+<!--sticky table col-->
+<div class="flex  items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-50 p-5">
+        <h1 class="text-center m-5 font-bold underline">sticky table col</h1>
+        <div class=" relative ">
+            <!-- Main content -->
+            <div class="container__content h-48  w-full overflow-y-scroll">
+<table class= "flex" >
+    <thead class="sticky left-0 p-2 bg-gray-400">
+        <tr class="flex flex-col ">
+            <th class="   ">hhhhhhhhhhhh </th>
+            <th class="  ">hhhhhhhhhhhh </th>
+            <th class="  ">hhhhhhhhhhhh </th>
+            <th class="   ">hhhhhhhhhhhh </th>
+            <th class="  ">hhhhhhhhhhhh </th>
+            <th class="  ">hhhhhhhhhhhh </th>
+            <th class="   ">hhhhhhhhhhhh </th>
+            <th class="  ">hhhhhhhhhhhh </th>
+            <th class="  ">hhhhhhhhhhhh </th>
+
+        </tr>
+    </thead>
+    <tbody class=" p-2 bg-gray-200">
+        <tr class=" ">
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+         </tr>
+          <tr class=" ">
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+         </tr>
+         <tr class=" ">
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+         </tr>
+         <tr class=" ">
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+         </tr>
+          <tr class=" ">
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+         </tr>
+         <tr class=" ">
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+         </tr>
+         <tr class=" ">
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+         </tr>
+          <tr class=" ">
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+         </tr>
+         <tr class=" ">
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+            <td class="px-2">hhhhhhhhhhhh </td>
+         </tr>
+    </tbody>
+</div>
+</table>
+<div class="container__fading bottom-0 left-0 absolute w-5 h-full  "></div>
+</div>
+</div>
+</div></div>
+<!--sticky table col close-->
+
+<!--sticky_table_header-->
+<div class="flex  items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-50 p-5">
+        <h1 class="text-center m-5 font-bold underline">sticky_table_header</h1>
+        <div class=" relative w-full ">
+            <!-- Main content -->
+            <div class="container__content h-48  w-full overflow-y-scroll">
+<table class= "flex flex-col   " >
+    <thead class="sticky top-0 py-2 bg-gray-400">
+        <tr class="flex justify-around">
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2 ">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+        </tr>
+    </thead>  
+    <tbody>
+        <tr class="flex justify-around">
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+        </tr>
+        <tr class="flex justify-around">
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+        </tr>
+        <tr class="flex justify-around">
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+        </tr>
+        <tr class="flex justify-around">
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+        </tr>
+        <tr class="flex justify-around">
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+        </tr>
+        <tr class="flex justify-around">
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+        </tr>
+        <tr class="flex justify-around">
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+        </tr>
+        <tr class="flex justify-around">
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+            <th class="px-2">hhhhhhhhhhhh </th>
+        </tr>
+    </tbody>
+</div>
+<div class="container__fading bottom-0 left-0 absolute w-5 h-full  "></div>
+
+</table></div>
+</div>
+</div>
+</div>
+
+
+<!--sticky table header close -->
+
+<!--input button-->
+<div class="flex  items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-50 p-5">
+        <h1 class="text-center m-5 font-bold underline">input number </h1>
+
+  <section class="left flex flex-col w-40">
+    <input type="number" class="guess p-5 pl-16 text-4xl font-bold border-2 border-gray-800" />
+    <button class="btn_check p-2 mt-2 rounded bg-gray-500 text-white text-2xl">Check!</button>
+  </section>
+  </div>
+  </div>
+
+<!--ribbon-->
+<div class="flex   items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-50 p-5">
+        <h1 class="text-center m-5 font-bold underline">ribbon</h1>
+<div class="container items-center flex justify-center bg-gray-400 py-1 w-32 h-10 relative p-2">
+    <div class=" h-2 w-full border-5 bg-black border-gray-900 rounded"></div>
+    <div class=" bg-black -bottom-6 absolute -z-20 border-24 border-solid border-gray-600 border-l-0 -right-6 w-5 h-5"></div>
+    <div class="  bg-gray-600  absolute top-full   border-t-8 border-l border-solid border-gray-900 border-b-0 border-r-0 left-0 w-4 h-4 "></div>
+    <div class=" bg-gray-600 absolute top-full  border-t-8 border-solid  border-gray-900 border-b-0 border-l-0 right-0 w-4 h-4"></div>
+    <div class=" bg-black -bottom-6 absolute -z-20 border-1 border-solid border-gray-600 border-l-0 -right-6 w-5 h-5"></div>
+
+</div>
+</div>
+</div>
+
+<!--ribbon close-->
+
+<!--lined-paper-->
+<div class="flex items-center justify-center h-full my-10 ">
+    <div class="w-3/5 bg-gray-200 p-5">
+        <h1 class="text-center m-5 font-bold underline">lined paper</h1>
+  <div class="container bg-gradient-to-r from-gray-900  to-transparent  width-3/4   leading-3  max-h-screen">
+    ...<div class=" ">
+        <p class="border-b-8 border-gray-900">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of
+         a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+    </p></div>
+  </div>
+</div>
+</div>
+<!--lined-paper close-->
+
+
+
+
+<!--banner cookiee-->    
+
+    <div class="banner bottom-0 left-0  w-full items-center flex justify-center text-black  bg-gray-200 text-center fixed">
+    
+       <!-- Tells visitors that the website uses cookie -->
+        <div class="banner__content flex-1">
+             cookie banner</br>
+         ... Tells visitors that the website uses cookie</br>
+             Tells visitors that the website uses cookie 
+        </div>
+       
+    
+        <!-- Close button -->
+        <button class="button bg-transparent border border-gray-500 cursor-pointer h-8 w-8 relative">
+            <div class="button__line  bg-black absolute h-1 w-full 
+             button__line--first left-0 top-1/2 transform -translate-y-1/2 rotate-45  "></div>
+        
+            <div class="button__line bg-black absolute h-full w-1  
+            button__line--second left-1/2 top-0  transform -translate-x-1/2 rotate-45"></div>
+        </button>
+      
+    </div>
+
+<!--banner cookkiee close-->  
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
