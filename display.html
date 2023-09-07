@@ -81,6 +81,48 @@
              
         
     <!-- voting -->
+<!--     nextjs start -->
+    import { useState } from "react";
+
+const Counter = () => {
+  const [x, setX] = useState(920);
+
+  const handleIncrement = () => {
+    setX(x + 1);
+  };
+
+  const handleDecrement = () => {
+    setX(x - 1);
+  };
+
+  return (
+    <div className="bg-white shadow-2xl mt-20 h-96 flex flex-row justify-center items-center lg:mx-36 md:mx-24 py-10 rounded-lg">
+      <div className="border border-gray-400 h-32 w-10 rounded-md">
+        <div className="flex justify-center">
+          <button
+            className="text-2xl text-gray-400 -mt-2"
+            onClick={handleIncrement}
+          >
+            <i className="fas fa-caret-up"></i>
+          </button>
+        </div>
+        <div>
+          <span className="flex flex-row justify-center text-gray-800 py-6">
+            {x}
+          </span>
+        </div>
+        <div className="flex justify-center">
+          <button className="text-2xl text-gray-400" onClick={handleDecrement}>
+            <i className="fas fa-caret-down"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Counter;
+<!--     nextjs end -->
     <div class="bg-white shadow-2xl mt-20 h-96 flex flex-row justify-center items-center lg:mx-36 md:mx-24 py-10 rounded-lg ">
         <div class="border border-gray-400 h-32 w-10 rounded-md ">
             <div class="flex  justify-center"><button id="increment" class="text-2xl text-gray-400 -mt-2"><i class="fas fa-caret-up"></i></button></div>
@@ -102,7 +144,8 @@
     decrement.addEventListener('click', function () {
     span.textContent = x--;
     });
-    </script> 
+    </script>
+<!--     voting end -->
     
     <!-- watermark -->
     <div class="bg-white shadow-2xl mt-20  flex flex-row justify-center items-center lg:mx-36 md:mx-24 py-20 rounded-lg ">
